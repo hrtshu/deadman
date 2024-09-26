@@ -432,7 +432,6 @@ class CursesCtrl():
             if target == SEPARATOR: continue
             if alen < len(target.addr): alen = len(target.addr)
         if alen > MAX_ADDRESS_LENGTH: alen = MAX_ADDRESS_LENGTH
-        else: alen += 5
 
         self.start_address = self.start_hostname + self.length_hostname + 1
         self.length_address = alen
