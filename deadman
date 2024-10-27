@@ -432,6 +432,7 @@ class CursesCtrl():
             if target == SEPARATOR: continue
             if alen < len(target.addr): alen = len(target.addr)
         if alen > MAX_ADDRESS_LENGTH: alen = MAX_ADDRESS_LENGTH
+        alen = 0
 
         self.start_address = self.start_hostname + self.length_hostname + 1
         self.length_address = alen
@@ -512,8 +513,8 @@ class CursesCtrl():
         # Print reference hostname and address
         self.waddstr(TITLE_VERTIC_LENGTH, len(ARROW),
                      hostname_str, curses.A_BOLD)
-        self.waddstr(TITLE_VERTIC_LENGTH, self.start_address,
-                     address_str, curses.A_BOLD)
+        # self.waddstr(TITLE_VERTIC_LENGTH, self.start_address,
+        #              address_str, curses.A_BOLD)
 
         # Print references of values
         self.waddstr(TITLE_VERTIC_LENGTH, self.ref_start,
